@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Gateway - WellnessWave</title>
+    <link rel="stylesheet" href="patientgateway.css">
+    <script defer src="patientgateway.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="WellnessWaveLogo.png" alt="WellnessWave Logo" class="logo">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="message.html">Appointments</a>
+            <a href="#">Patient Reviews</a>
+            <a href="index.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <div class="hero-text">
+            <h1>Welcome to the Patient Gateway</h1>
+            <p>Your personal portal to wellness</p>
+            <button class="cta-button bounce" onclick="scrollToSection('appointments')"><a class="scrool" href="message.html">Schedule an Appointment</a></button>
+        </div>
+        <div class="hero-image">
+            <img src="patientGatewayImage.jpg" alt="Patient Portal">
+        </div>
+    </section>
+
+    
+
+    <section class="reviews fade-in" id="reviews">
+        <h2>Patient Reviews</h2>
+        <div class="review-card slide-in">
+            <h3>Dnyananda Ramtirthakar</h3>
+            <p>Excellent service and care. The doctors and staff are amazing. Highly recommend WellnessWave!</p>
+            <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="review-card slide-in">
+            <h3>Ram Suryanand</h3>
+            <p>My experience at WellnessWave has been nothing but positive. The facilities are top-notch and the staff is very attentive.</p>
+            <div class="rating">★★★★★</div>
+        </div>
+
+        <div class="review-card slide-in">
+            <h3>Sarvesh Shahane</h3>
+            <p>The patient portal is so easy to use and the appointment process is seamless. Great job, WellnessWave!</p>
+            <div class="rating">★★★★★</div>
+        </div>
+
+        <button class="cta-button bounce" onclick="scrollToSection('contact')">Leave a Review</button>
+    </section>
+
+    <section class="contact fade-in" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <label for="contact-name">Full Name:</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 WellnessWave. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
