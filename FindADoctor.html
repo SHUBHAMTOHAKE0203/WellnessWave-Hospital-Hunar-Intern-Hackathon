@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Find A Doctor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%; /* 1 / 0.8 = 125% */
+        }
+        header {
+            background-color: #012D5A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .search-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .search-form h2 {
+            margin-top: 0;
+            color: #012D5A;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #012D5A;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #014f86;
+        }
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .doctor-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .doctor-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .doctor-card h3 {
+            margin: 10px 0;
+            color: #012D5A;
+        }
+        .doctor-card p {
+            margin: 0;
+            color: #555;
+        }
+        .navbar
+{
+    display:flex;
+    
+    background-color: #ceddeb;
+    justify-self: end;
+   
+ 
+  
+
+}
+.navbar span{
+    text-decoration: none;
+    color:#2f2f2f;
+    padding: 3px 3px;
+   margin-left: 50px;
+   margin-right: 50px;
+   font-weight: 300;
+   
+   padding: 2px;
+  
+
+    
+    
+
+}
+#amb
+{
+    margin-left: 30px;
+    size: 30px;
+    box-shadow: 2px 5px 20px 3px rgb(150, 2, 2);
+    border-radius: 50px;
+    font-size: 40px;
+    color: rgb(241, 31, 31);
+    
+    
+}
+
+#head
+{
+    padding: 10px;
+}
+
+
+.navbar2 {
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #012D5A;       
+    padding: 10px; 
+                  
+}
+
+.nav-link {
+    flex: 1;                    
+    text-align: center;            
+              
+    background-color:#3882cd;        
+    border-radius: 5px;            
+    margin: 0 10px;               
+    transition: background-color 0.3s;              
+
+}
+.nav-link:hover
+{
+    background-color: #0355a8;
+}
+
+.nav-link a {
+    display: block;               
+    color: #fff;                   
+    text-decoration: none;         
+    padding: 10px; 
+    font-weight: 500;                
+}
+
+.resha
+{
+    color: white;
+}
+.navbar3
+{
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #e1dede;       
+    padding: 10px;  
+    height: 50px; 
+    border: 0.2px solid black;
+    font-size: medium;
+    position: sticky;
+   z-index: 1;
+top: 0;
+
+    
+}
+
+.navopt
+{
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s; 
+     
+
+}
+.navopt a{
+    display: block;               
+    color: #2f2f2f;                   
+    text-decoration: none;         
+    padding: 15px;  
+    font-weight: 500; 
+    margin-top: 4px;
+
+}
+.navopt :hover
+{
+    background-color: #EFEFEF;
+    margin: 0;
+    height: 40px;
+
+    
+}
+
+
+.resha1
+{
+    color: black;
+}
+
+.navopt-active
+{
+    background-color: #EFEFEF;
+  
+    box-shadow: #3882cd;
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s;  
+}
+
+.navopt-active a{
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    padding: 10px;  
+    margin-top: 4px;
+   
+}
+.link
+{
+    text-decoration: none;
+    color: #2f2f2f;
+}
+        @media (max-width: 768px) {
+            .doctor-card {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .doctor-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="Screenshot (270).png" width="300px" height="100px" id="head">
+        <ul>
+            <span href="index.html" class="active"><a class="link" href="Location.html">LOCATIONS</a></span>
+            <span href="#" class="active1"><a class="link" href="FindADoctor.html">FIND A DOCTOR</a></span>
+            <span href="#" class="active1"><a class="link" href="message.html">REQUEST APPOINTMENT</a></span>
+            <span href="#" class="active1"><a class="link" href="patientgateway.html">PATIENT GATEWAY</a></span>
+            
+            
+            <a href="ambulance.html"><i class="fa-solid fa-truck-medical" id="amb"></i></a>
+            
+        </ul>
+        
+        
+    </div>
+    <nav class="navbar2">
+        <div class="nav-link"><a href="pateints.html">PATIENTS AND FAMILIES</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="DoctorCards.html">MEDICAL PROFESSIONALS</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="headReserach.html">RESERACH</a></div>
+    </nav>
+    <nav class="navbar3">
+        ,<div class="navopt-active" ><a  href="index.html">HOME</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="careers.html">CAREERS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="visitors.html">VISITORS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="DAySurgery.html">DAY SURGERY</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="HospitalStay.html">IN-HOSPITAL STAYS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="fitness.html">FITNESS TRACK</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="WellnessProgram.html">WELLNESS PROGRAM</a></div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="search-form">
+            <h2>Search for a Doctor</h2>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="specialty">Specialty:</label>
+                    <select id="specialty" name="specialty">
+                        <option value="">Select Specialty</option>
+                        <option value="cardiologist">Cardiologist</option>
+                        <option value="neurologist">Neurologist</option>
+                        <option value="orthopedic">Orthopedic Surgeon</option>
+                        <option value="gynecologist">Gynecologist</option>
+                        <option value="urologist">Urologist</option>
+                        <option value="maxillofacial">Oral and Maxillofacial Surgeon</option>
+                        <option value="vascular">Vascular Surgeon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter location">
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="results" id="results">
+        
+        </div>
+    </div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const specialty = document.getElementById('specialty').value;
+            const location = document.getElementById('location').value;
+            const doctors = [
+                { name: "Dr. Raman Tadke", specialty: "cardiologist", location: "Mumbai", image: "doctor13.jpeg" },
+                { name: "Dr. Shubham Sharma", specialty: "cardiologist", location: "Pune", image: "doctor12.jpg" },
+                { name: "Dr. Suhani Bhatiya", specialty: "neurologist", location: "Pune", image: "doctor9.avif" },
+                { name: "Dr. Satish Kulkarni", specialty: "orthopedic", location: "Pune", image: "doctor11.jpg" },
+                { name: "Dr. Bharti Singhaniya", specialty: "gynecologist", location: "Pune", image: "doctor8.jpg" },
+                { name: "Dr. Shantanu Hingmire", specialty: "urologist", location: "Pune", image: "doctor5.avif" },
+                { name: "Dr. Kuldeep Jakhotiya", specialty: "maxillofacial", location: "Pune", image: "doctor4.jpg" },
+                { name: "Dr. Jiya Khan", specialty: "vascular", location: "Pune", image: "doctor3.webp" }
+            ];
+            const filteredDoctors = doctors.filter(doctor => {
+                return (!specialty || doctor.specialty === specialty) &&
+                       (!location || doctor.location.toLowerCase().includes(location.toLowerCase()));
+            });
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            if (filteredDoctors.length === 0) {
+                resultsContainer.innerHTML = '<p>No doctors found.</p>';
+                return;
+            }
+
+            filteredDoctors.forEach(doctor => {
+                const doctorCard = document.createElement('div');
+                doctorCard.className = 'doctor-card';
+                doctorCard.innerHTML = `
+                    <img src="${doctor.image}" alt="${doctor.name}">
+                    <h3>${doctor.name}</h3>
+                    <p><strong>Specialty:</strong> ${doctor.specialty}</p>
+                    <p><strong>Location:</strong> ${doctor.location}</p>
+                `;
+                resultsContainer.appendChild(doctorCard);
+            });
+        });
+    </script>
+</body>
+</html>
