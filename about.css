@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f4f4f4;
+    color: #6d7892;
+    transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%; /* 1 / 0.8 = 125% */
+            min-height: 100vh;
+            box-sizing: border-box;
+}
+
+section {
+    padding: 40px;
+    
+    
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #012D5A;
+    margin-bottom: 30px;
+}
+
+.head {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+      /* Allows scrolling if the cards overflow */
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    height: auto;
+    width: 460px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border: 2px solid #012D5A;
+}
+
+.card h3 {
+    color: #012D5A;
+    margin-bottom: 15px;
+}
+h3{
+    color: #012D5A;
+}
+
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Other styles remain unchanged */
+.service {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 28px;
+    color: #012D5A;
+    margin-bottom: 20px;
+}
+
+.service-para {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.services {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 2px solid #012D5A;
+}
+
+.services ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    line-height: 1.8;
+    color: #444;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 20px;
+    color: #555;
+}
+
+ul {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    padding-left: 20px;
+}
+
+.navbar
+{
+    display:flex;
+    
+    background-color: #ceddeb;
+    justify-self: end;
+   
+ 
+  
+
+}
+.navbar span{
+    text-decoration: none;
+    color:#2f2f2f;
+    padding: 3px 3px;
+   margin-left: 50px;
+   margin-right: 50px;
+   font-weight: 300;
+   
+   padding: 2px;
+  
+
+    
+    
+
+}
+#amb
+{
+    margin-left: 30px;
+    size: 30px;
+    box-shadow: 2px 5px 20px 3px rgb(150, 2, 2);
+    border-radius: 50px;
+    font-size: 40px;
+    color: rgb(241, 31, 31);
+    
+    
+}
+
+#head
+{
+    padding: 10px;
+}
+
+
+.navbar2 {
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #012D5A;       
+    padding: 10px; 
+                  
+}
+
+.nav-link {
+    flex: 1;                    
+    text-align: center;            
+              
+    background-color:#3882cd;        
+    border-radius: 5px;            
+    margin: 0 10px;               
+    transition: background-color 0.3s;              
+
+}
+.nav-link:hover
+{
+    background-color: #0355a8;
+}
+
+.nav-link a {
+    display: block;               
+    color: #fff;                   
+    text-decoration: none;         
+    padding: 10px; 
+    font-weight: 500;                
+}
+
+.resha
+{
+    color: white;
+}
+
+.navbar3
+{
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #e1dede;       
+    padding: 10px;  
+    height: 50px; 
+    border: 0.2px solid black;
+    font-size: medium;
+    position: sticky;
+   z-index: 1;
+top: 0;
+
+    
+}
+
+.navopt
+{
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s; 
+     
+
+}
+
+.navopt a{
+    display: block;               
+    color: #2f2f2f;                   
+    text-decoration: none;         
+    padding: 15px;  
+    font-weight: 500; 
+    margin-top: 4px;
+
+}
+.navopt :hover
+{
+    background-color: #EFEFEF;
+    margin: 0;
+    height: 40px;
+
+    
+}
+
+
+.resha1
+{
+    color: black;
+}
+
+.navopt-active
+{
+    background-color: #EFEFEF;
+  
+    box-shadow: #3882cd;
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s;  
+}
+
+.navopt-active a{
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    padding: 10px;  
+    margin-top: 4px;
+   
+}
+
+.link
+{
+    text-decoration: none;
+    color: #2f2f2f;
+}
