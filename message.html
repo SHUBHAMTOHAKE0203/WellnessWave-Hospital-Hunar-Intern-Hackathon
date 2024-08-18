@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appointment</title>
+    <link rel="stylesheet" href="message.css">
+</head>
+<body>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="form-content">
+            <input type="hidden" name="access_key" value="b3e7cd8f-e398-498a-9193-1d03cd84a723">
+            <h1>Book An Appointment</h1>
+            <div class="name">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="email">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="phone">
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="date">
+                <input type="date" name="appointment_date" placeholder="Preferred Appointment Date" required>
+            </div>
+            <div class="time">
+                <input type="time" name="appointment_time" placeholder="Preferred Appointment Time" required>
+            </div>
+            <div class="doctor">
+                <input type="text" name="doctor_name" placeholder="Preferred Doctor (if any)" required>
+            </div>
+            <div class="message">
+                <textarea name="message" placeholder="Additional Information" required></textarea>
+            </div>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

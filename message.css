@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* appointment.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url('century_rayon_doctordoodle.svg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.form-content h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #012D5A;
+    text-align: center;
+}
+
+.form-content input,
+.form-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #012D5A;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-content input[type="text"],
+.form-content input[type="email"],
+.form-content input[type="tel"],
+.form-content input[type="date"],
+.form-content input[type="time"] {
+    font-size: 16px;
+}
+
+.form-content textarea {
+    height: 80px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.form-content .submit {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content button {
+    background-color: #012D5A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-content button:hover {
+    background-color: #011C3A;
+}
