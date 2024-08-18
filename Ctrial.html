@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Trials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%; /* 1 / 0.8 = 125% */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #012D5A;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        .filter-section label {
+            font-weight: bold;
+        }
+
+        .filter-section select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .trial-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .trial-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .trial-item:last-child {
+            border-bottom: none;
+        }
+
+        .trial-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #01477D;
+        }
+
+        .trial-status {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .trial-description {
+            font-size: 14px;
+            color: #333;
+        }
+        .navbar
+{
+    display:flex;
+    
+    background-color: #ceddeb;
+    justify-self: end;
+   
+ 
+  
+
+}
+.navbar span{
+    text-decoration: none;
+    color:#2f2f2f;
+    padding: 3px 3px;
+   margin-left: 50px;
+   margin-right: 50px;
+   font-weight: 300;
+   
+   padding: 2px;
+  
+
+    
+    
+
+}
+#amb
+{
+    margin-left: 30px;
+    size: 30px;
+    box-shadow: 2px 5px 20px 3px rgb(150, 2, 2);
+    border-radius: 50px;
+    font-size: 40px;
+    color: rgb(241, 31, 31);
+    
+    
+}
+
+#head
+{
+    padding: 10px;
+}
+
+
+.navbar2 {
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #012D5A;       
+    padding: 10px; 
+                  
+}
+
+.nav-link {
+    flex: 1;                    
+    text-align: center;            
+              
+    background-color:#3882cd;        
+    border-radius: 5px;            
+    margin: 0 10px;               
+    transition: background-color 0.3s;              
+
+}
+.nav-link:hover
+{
+    background-color: #0355a8;
+}
+
+.nav-link a {
+    display: block;               
+    color: #fff;                   
+    text-decoration: none;         
+    padding: 10px; 
+    font-weight: 500;                
+}
+
+.resha
+{
+    color: white;
+}
+
+.navbar3
+{
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #e1dede;       
+    padding: 10px;  
+    height: 50px; 
+    border: 0.2px solid black;
+    font-size: medium;
+    position: sticky;
+   z-index: 1;
+top: 0;
+
+    
+}
+
+.navopt
+{
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s; 
+     
+
+}
+
+.navopt a{
+    display: block;               
+    color: #2f2f2f;                   
+    text-decoration: none;         
+    padding: 15px;  
+    font-weight: 500; 
+    margin-top: 4px;
+
+}
+.navopt :hover
+{
+    background-color: #EFEFEF;
+    margin: 0;
+    height: 40px;
+
+    
+}
+
+
+.resha1
+{
+    color: black;
+}
+
+.navopt-active
+{
+    background-color: #EFEFEF;
+  
+    box-shadow: #3882cd;
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s;  
+}
+
+.navopt-active a{
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    padding: 10px;  
+    margin-top: 4px;
+   
+}
+
+.link
+{
+    text-decoration: none;
+    color: #2f2f2f;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="Screenshot (270).png" width="300px" height="100px" id="head">
+        <ul>
+            <span href="index.html" class="active"><a class="link" href="Location.html">LOCATIONS</a></span>
+            <span href="#" class="active1"><a class="link" href="FindADoctor.html">FIND A DOCTOR</a></span>
+            <span href="#" class="active1"><a class="link" href="message.html">REQUEST APPOINTMENT</a></span>
+            <span href="#" class="active1"><a class="link" href="patientgateway.html">PATIENT GATEWAY</a></span>
+            
+            
+            <a href="ambulance.html"><i class="fa-solid fa-truck-medical" id="amb"></i></a>
+            
+        </ul>
+        
+        
+    </div>
+    <nav class="navbar2">
+        <div class="nav-link"><a href="pateints.html">PATIENTS AND FAMILIES</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="DoctorCards.html">MEDICAL PROFESSIONALS</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="headReserach.html">RESERACH</a></div>
+    </nav>
+    <nav class="navbar3">
+        ,<div class="navopt-active" ><a  href="index.html">HOME</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="careers.html">CAREERS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="visitors.html">VISITORS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="DAySurgery.html">DAY SURGERY</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="HospitalStay.html">IN-HOSPITAL STAYS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="fitness.html">FITNESS TRACK</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="WellnessProgram.html">WELLNESS PROGRAM</a></div>
+    </nav>
+    <div class="container">
+        <h1>Clinical Trials</h1>
+        <div class="filter-section">
+            <label for="status-filter">Filter by Status:</label>
+            <select id="status-filter">
+                <option value="all">All</option>
+                <option value="ongoing">Ongoing</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+
+        <ul id="trial-list" class="trial-list">
+            <!-- Trials will be populated here by JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        const trials = [
+            { title: 'Trial for Drug A', status: 'ongoing', description: 'Testing Drug A for condition X.' },
+            { title: 'Trial for Drug B', status: 'completed', description: 'Completed trial for Drug B on condition Y.' },
+            { title: 'Trial for Drug C', status: 'pending', description: 'Pending trial for Drug C targeting condition Z.' },
+            { title: 'Trial for Drug D', status: 'ongoing', description: 'Ongoing trial of Drug D for condition A.' },
+            { title: 'Trial for Drug E', status: 'completed', description: 'Drug E trial completed with promising results.' },
+            { title: 'Trial for Drug F', status: 'pending', description: 'Drug F trial is pending, awaiting approval.' },
+            { title: 'Trial for Drug G', status: 'ongoing', description: 'Drug G trial in progress for condition B.' },
+            { title: 'Trial for Drug H', status: 'completed', description: 'Trial for Drug H completed successfully.' },
+            { title: 'Trial for Drug I', status: 'pending', description: 'Drug I trial pending due to regulatory issues.' },
+            { title: 'Trial for Drug J', status: 'ongoing', description: 'Currently ongoing trial for Drug J for condition C.' }
+        ];
+
+        const statusFilter = document.getElementById('status-filter');
+        const trialList = document.getElementById('trial-list');
+
+        function renderTrials(filter) {
+            trialList.innerHTML = '';
+            const filteredTrials = filter === 'all' ? trials : trials.filter(trial => trial.status === filter);
+            
+            filteredTrials.forEach(trial => {
+                const trialItem = document.createElement('li');
+                trialItem.className = 'trial-item';
+
+                trialItem.innerHTML = `
+                    <div class="trial-title">${trial.title}</div>
+                    <div class="trial-status">Status: ${trial.status.charAt(0).toUpperCase() + trial.status.slice(1)}</div>
+                    <div class="trial-description">${trial.description}</div>
+                `;
+
+                trialList.appendChild(trialItem);
+            });
+        }
+
+        statusFilter.addEventListener('change', () => {
+            renderTrials(statusFilter.value);
+        });
+
+        // Initial render
+        renderTrials(statusFilter.value);
+    </script>
+</body>
+</html>

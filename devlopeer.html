@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Footer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer1 {
+            background: white; /* Dark background */
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer1 .team-logo {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .footer1 .team-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #00aced; /* Accent color */
+        }
+
+        .footer1 .developers {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer1 .developers a {
+            color: #00aced; /* Accent color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer1 .developers a:hover {
+            color: #012142;
+            text-decoration: underline;
+        }
+
+        .footer1 .social-media {
+            margin: 10px 0;
+        }
+
+        .footer1 .social-media a {
+            color: black;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        
+
+        @media (max-width: 600px) {
+            .footer1 .team-name {
+                font-size: 20px;
+            }
+
+            .footer1 .developers {
+                font-size: 14px;
+            }
+
+            .footer1 .social-media a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <footer class="footer1">
+        <img src="team.png" alt="Team Logo" class="team-logo">
+        <div class="team-name">WebWizards</div>
+        <div class="developers">
+            <p>Developed by <a href="https://linkedin.com/in/developer1" target="_blank">Shubham Tohake</a>,<a href="https://linkedin.com/in/developer2" target="_blank">Shashwati Meshram</a></p>
+        </div>
+        
+    </footer>
+</body>
+</html>
