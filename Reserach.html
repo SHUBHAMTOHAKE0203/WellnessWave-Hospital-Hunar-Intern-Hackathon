@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sarikas Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+           
+        }
+        
+        header {
+            background-color: #012D5A;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        section {
+            padding: 2em;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .research-image, .paper-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form label {
+            margin-top: 1em;
+        }
+        
+        form input, form textarea {
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        form button {
+            margin-top: 1em;
+            padding: 0.7em;
+            background-color: #012D5A;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            background-color: #012D5A;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr. Sarikas' Research on Cardiovascular Health</h1>
+        <nav>
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="research">
+        <h2>About the Research</h2>
+        <img src="sarikaDr.avif" alt="Dr. Sarikas" class="research-image">
+        <p>Dr. Sarikas is a renowned heart specialist known for his groundbreaking research in cardiovascular health. His latest paper, <strong>"Innovative Approaches to Heart Disease Management"</strong>, explores novel treatment methods and their efficacy in improving patient outcomes.</p>
+        <p>This research is pivotal in advancing the field of cardiology and offers new insights into managing heart diseases more effectively. Dr. Sarikas’ work has been published in several leading medical journals and has garnered significant attention from the medical community.</p>
+    </section>
+<br><br>
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>
+                <h3>Innovative Approaches to Heart Disease Management</h3>
+                <p>Published in: <i>Journal of Cardiovascular Medicine</i>, 2024</p>
+                <img src="RP.png" alt="Paper Cover" class="paper-image">
+                <p>This paper provides an in-depth analysis of new treatment strategies for heart disease, focusing on their potential benefits and limitations.</p>
+            </li>
+            
+            <!-- Add more publications as needed -->
+        </ul>
+    </section>
+    <br><br>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or would like to learn more about Dr. Sarikas' research, please reach out via the contact form below.</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+  
+</body>
+</html>
