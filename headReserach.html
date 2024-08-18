@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>WellnessWave Hospital Research Work</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%; /* 1 / 0.8 = 125% */
+        }
+        header {
+            /* background-color: #012D5A; */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #012D5A;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .page {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .page img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .page h2 {
+            color: #012D5A;
+            font-size: 1.8em;
+            margin-top: 10px;
+        }
+        .page p {
+            font-size: 20px;
+            color: #555;
+            margin: 20px 0;
+        }
+        
+        .navbar
+{
+    display:flex;
+    
+    background-color: #ceddeb;
+    justify-self: end;
+   
+ 
+  
+
+}
+.navbar span{
+    text-decoration: none;
+    color:#2f2f2f;
+    padding: 3px 3px;
+   margin-left: 50px;
+   margin-right: 50px;
+   font-weight: 300;
+   
+   padding: 2px;
+  
+
+    
+    
+
+}
+#amb
+{
+    margin-left: 30px;
+    size: 30px;
+    box-shadow: 2px 5px 20px 3px rgb(150, 2, 2);
+    border-radius: 50px;
+    font-size: 40px;
+    color: rgb(241, 31, 31);
+    
+    
+}
+
+#head
+{
+    padding: 10px;
+}
+
+
+.navbar2 {
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #012D5A;       
+    padding: 10px; 
+                  
+}
+
+.nav-link {
+    flex: 1;                    
+    text-align: center;            
+              
+    background-color:#3882cd;        
+    border-radius: 5px;            
+    margin: 0 10px;               
+    transition: background-color 0.3s;              
+
+}
+.nav-link:hover
+{
+    background-color: #0355a8;
+}
+
+.nav-link a {
+    display: block;               
+    color: #fff;                   
+    text-decoration: none;         
+    padding: 10px; 
+    font-weight: 500;                
+}
+
+.resha
+{
+    color: white;
+}
+.navbar3
+{
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #e1dede;       
+    padding: 10px;  
+    height: 50px; 
+    border: 0.2px solid black;
+    font-size: medium;
+    position: sticky;
+   z-index: 1;
+top: 0;
+
+    
+}
+
+.navopt
+{
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s; 
+     
+
+}
+.navopt a{
+    display: block;               
+    color: #2f2f2f;                   
+    text-decoration: none;         
+    padding: 15px;  
+    font-weight: 500; 
+    margin-top: 4px;
+
+}
+.navopt :hover
+{
+    background-color: #EFEFEF;
+    margin: 0;
+    height: 40px;
+
+    
+}
+
+
+.resha1
+{
+    color: black;
+}
+
+.navopt-active
+{
+    background-color: #EFEFEF;
+  
+    box-shadow: #3882cd;
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s;  
+}
+
+.navopt-active a{
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    padding: 10px;  
+    margin-top: 4px;
+   
+}
+.link
+{
+    text-decoration: none;
+    color: #2f2f2f;
+}
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .page {
+                margin: 10px 0;
+            }
+        }
+
+        .navbar
+{
+    display:flex;
+    
+    background-color: #ceddeb;
+    justify-self: end;
+   
+ 
+  
+
+}
+.navbar span{
+    text-decoration: none;
+    color:#2f2f2f;
+    padding: 3px 3px;
+   margin-left: 50px;
+   margin-right: 50px;
+   font-weight: 300;
+   
+   padding: 2px;
+  
+
+    
+    
+
+}
+#amb
+{
+    margin-left: 30px;
+    size: 30px;
+    box-shadow: 2px 5px 20px 3px rgb(150, 2, 2);
+    border-radius: 50px;
+    font-size: 40px;
+    color: rgb(241, 31, 31);
+    
+    
+}
+
+#head
+{
+    padding: 10px;
+}
+
+
+.navbar2 {
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #012D5A;       
+    padding: 10px; 
+                  
+}
+
+.nav-link {
+    flex: 1;                    
+    text-align: center;            
+              
+    background-color:#3882cd;        
+    border-radius: 5px;            
+    margin: 0 10px;               
+    transition: background-color 0.3s;              
+
+}
+.nav-link:hover
+{
+    background-color: #0355a8;
+}
+
+.nav-link a {
+    display: block;               
+    color: #fff;                   
+    text-decoration: none;         
+    padding: 10px; 
+    font-weight: 500;                
+}
+
+.resha
+{
+    color: white;
+}
+
+.navbar3
+{
+    display: flex;               
+    justify-content: space-evenly;
+    align-items: center;           
+     background-color: #e1dede;       
+    padding: 10px;  
+    height: 50px; 
+    border: 0.2px solid black;
+    font-size: medium;
+    position: sticky;
+   z-index: 1;
+top: 0;
+
+    
+}
+
+.navopt
+{
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s; 
+     
+
+}
+
+.navopt a{
+    display: block;               
+    color: #2f2f2f;                   
+    text-decoration: none;         
+    padding: 15px;  
+    font-weight: 500; 
+    margin-top: 4px;
+
+}
+.navopt :hover
+{
+    background-color: #EFEFEF;
+    margin: 0;
+    height: 40px;
+
+    
+}
+
+
+.resha1
+{
+    color: black;
+}
+
+.navopt-active
+{
+    background-color: #EFEFEF;
+  
+    box-shadow: #3882cd;
+    flex: 1;                    
+    text-align: center;            
+    height: 70px; 
+    margin: 0 10px;               
+    transition: background-color 0.3s;  
+}
+
+.navopt-active a{
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    padding: 10px;  
+    margin-top: 4px;
+   
+}
+
+.link
+{
+    text-decoration: none;
+    color: #2f2f2f;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="Screenshot (270).png" width="300px" height="100px" id="head">
+        <ul>
+            <span href="index.html" class="active"><a class="link" href="Location.html">LOCATIONS</a></span>
+            <span href="#" class="active1"><a class="link" href="FindADoctor.html">FIND A DOCTOR</a></span>
+            <span href="#" class="active1"><a class="link" href="message.html">REQUEST APPOINTMENT</a></span>
+            <span href="#" class="active1"><a class="link" href="patientgateway.html">PATIENT GATEWAY</a></span>
+            
+            
+            <a href="ambulance.html"><i class="fa-solid fa-truck-medical" id="amb"></i></a>
+            
+        </ul>
+        
+        
+    </div>
+    <nav class="navbar2">
+        <div class="nav-link"><a href="pateints.html">PATIENTS AND FAMILIES</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="DoctorCards.html">MEDICAL PROFESSIONALS</a></div> <p color="white" class="resha">|</p>
+        <div class="nav-link"><a href="headReserach.html">RESERACH</a></div>
+    </nav>
+    <nav class="navbar3">
+        ,<div class="navopt-active" ><a  href="index.html">HOME</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="careers.html">CAREERS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="visitors.html">VISITORS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="DAySurgery.html">DAY SURGERY</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="HospitalStay.html">IN-HOSPITAL STAYS</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="fitness.html">FITNESS TRACK</a></div> <p color="white" class="resha1">|</p>
+        <div class="navopt"><a href="WellnessProgram.html">WELLNESS PROGRAM</a></div>
+    </nav>
+    <br>
+    <header>
+        <h1>WellnessWave Hospital Reserach Work</h1>
+    </header>
+    <div class="container">
+        <div class="page">
+            <img src="newHeartTech.jpeg" alt="Innovative Cardiac Treatments">
+            <h2>Innovative Cardiac Treatments</h2>
+            <p>Our research team is pioneering new techniques in cardiac treatments, focusing on minimally invasive procedures and advanced imaging technologies. This work aims to improve patient outcomes and reduce recovery times.</p>
+        </div>
+        <div class="page">
+            <img src="neuroTech.jpg" alt="Advancements in Neurological Care">
+            <h2>Advancements in Neurological Care</h2>
+            <p>We are at the forefront of neurological research, exploring cutting-edge treatments for various neurological disorders. Our goal is to enhance diagnostic accuracy and develop more effective therapies for patients.</p>
+        </div>
+        <div class="page">
+            <img src="orthhh.jpg" alt="Orthopedic Innovations">
+            <h2>Orthopedic Innovations</h2>
+            <p>Our orthopedic research focuses on improving surgical techniques and developing new implants. We aim to provide better solutions for joint replacement and repair, enhancing patient mobility and quality of life.</p>
+        </div>
+        <div class="page">
+            <img src="OncologicalBK.jpg" alt="Oncological Breakthroughs">
+            <h2>Oncological Breakthroughs</h2>
+            <p>We are dedicated to advancing cancer research with a focus on personalized treatment plans and new drug discoveries. Our work aims to offer better outcomes and less invasive treatment options for cancer patients.</p>
+        </div>
+        <div class="page">
+            <img src="Pediatric.jpg" alt="Pediatric Care Enhancements">
+            <h2>Pediatric Care Enhancements</h2>
+            <p>Our research in pediatric care aims to improve treatment methods for children with chronic and acute conditions. We are developing new therapies and interventions to enhance the health and well-being of young patients.</p>
+        </div>
+        <div class="page">
+            <img src="telehealth.jpg" alt="Telemedicine and Digital Health">
+            <h2>Telemedicine and Digital Health</h2>
+            <p>We are advancing telemedicine and digital health solutions to improve access to care and enhance patient monitoring. Our research is focused on developing technologies that support remote consultations and better health management.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
